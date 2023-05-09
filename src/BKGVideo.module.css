@@ -1,0 +1,12 @@
+
+.bgvideo {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: relative;
+    pointer-events: none;
+}
+
+.upperLayer {
+    color: "red",
+}
