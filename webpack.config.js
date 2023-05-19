@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.css/,
-        use: ["css-loader"]
+        use: [ "css-loader"]
       },
       {
         test: /\.(png|jpg|gif|svg|mp4)$/i,
@@ -38,6 +38,6 @@ module.exports = {
   },
   // pass all js files through Babel
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: [".*", ".js", ".jsx"],
   }
 };
