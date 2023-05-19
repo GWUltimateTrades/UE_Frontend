@@ -2,7 +2,6 @@
 import Logo_title from './Logo_title';
 import Top_bar_submenu from './Top_bar_submenu';
 import test from './assets/TEST.mp4';
-import styles from './BKGVideo.module.css';
 
 
 const Top_bar = () => {
