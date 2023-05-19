@@ -1,4 +1,4 @@
-import logo from './assets/LOGO1.SVG'
+import logo from './assets/LOGO1.svg'
 
 var Logo_title = (props) => (
     <div className='flex flex-wrap items-center mw5 mw6-l'>
