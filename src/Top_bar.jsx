@@ -28,11 +28,11 @@ const Top_bar = () => {
     return (
     <div style={outside}>
             <div className="flex w-100 pa3 items-start justify-center">
+                    <div style ={fontcolor} className="helvetica fw6 pa2 w-50">CALL: 1-647-865-0858</div>
                     <Top_bar_submenu font = 'helvetica' color = ''></Top_bar_submenu>
             </div>
         <div className="flex flex-wrap w-100 justify-center">
             <div className="flex flex-column w-90-m  w-60-l w-100 pv3 pl4-l  justify-center ">
-                <h2 style ={fontcolor} className="helvetica fw6 w-25">CALL: 1-647-865-0858</h2>
                 <div  className = "pl6-l pv5">
                     <Logo_title font = 'helvetica' color = ''></Logo_title>
                 </div>
