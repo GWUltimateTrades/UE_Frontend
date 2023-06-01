@@ -3,14 +3,14 @@ const Top_bar_submenu = (props) => {
         color: '#ebc85d'
     }
     return (
-    <div>
-        <div style={fontcolor} className = {`${props.color} flex justify-center items-start pa1`}>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>ABOUT US</div>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>CONTRACTING & SERVICES</div>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>JOIN US</div>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>TIPS AND TRICKS</div>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>NEWS</div>
-            <div className = {`pa2 ${props.font} fw6 w-25`}>CONTACT US</div>
+    <div className="w-100">
+        <div style={fontcolor} className = {`${props.color} flex items-end pa1`}>
+            <div className = {`pa2 ${props.font} fw6 ph4`}>ABOUT US</div>
+            <div className = {`pa2 ${props.font} fw6 ph4`}>CONTRACTING & SERVICES</div>
+            <div className = {`pa2 ${props.font} fw6 ph4`}>JOIN US</div>
+            <div className = {`pa2 ${props.font} fw6 ph4 `}>TIPS AND TRICKS</div>
+            <div className = {`pa2 ${props.font} fw6 ph4`}>NEWS</div>
+            <div className = {`pa2 ${props.font} fw6 ph4`}>CONTACT US</div>
         </div>
     </div>)
 }
