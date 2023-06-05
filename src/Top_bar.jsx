@@ -13,7 +13,8 @@ const Top_bar = () => {
         left: '0',
         objectFit: 'cover',
         zIndex: '-1',
-        background: '#174926'
+        background: '#174926',
+        opacity: '0.2',
     }
 
     const outside = {
@@ -21,25 +22,40 @@ const Top_bar = () => {
         width: '100%',
         height: '100%',
         overflow: 'hidden',
+        opacity: '1',
+        background: '#174926',
+        zIndex: '1',
+    }
+
+    const full = {
+        opacity: '1',
+        zIndex: '4',
     }
     const fontcolor = {
         color: '#ebc85d'
     }
     return (
     <div style={outside}>
-            <div className="flex w-100 pa3 items-start justify-center">
-                    <div style ={fontcolor} className="helvetica fw6 pa2 w-50">CALL: 1-647-865-0858</div>
-                    <Top_bar_submenu font = 'helvetica' color = ''></Top_bar_submenu>
-            </div>
-        <div className="flex flex-wrap w-100 justify-center">
-            <div className="flex flex-column w-90-m  w-60-l w-100 pv3 pl4-l  justify-center ">
-                <div  className = "pl6-l pv5">
-                    <Logo_title font = 'helvetica' color = ''></Logo_title>
+        <div>
+            <div className="flex justify-between w-100 pa3 fl">
+                <div style ={fontcolor} className="helvetica fw6 pa2 w-40">CALL: 1-647-865-0858</div>
+                    <div className="helvetica fw6 pa2 fr">
+                        <Top_bar_submenu font = 'helvetica' color = ''></Top_bar_submenu>
+                    </div>
+                </div>
+            <div className="flex w-100">
+                <div className="flex flex-column w-90-m  w-40-l w-100 pv3 pl4-l">
+                    <div style={full} className = "pl7-l pv2">
+                        <Logo_title font = 'helvetica' color = ''></Logo_title>
+                    </div>
+                </div>
+                <div style={fontcolor} className="flex w-100 f1 helvetica justify-center items-center">
+                    <div>Quality. Safety. Reliability. Every time.</div>
                 </div>
             </div>
-
         </div>
         <video style={vid} loop autoPlay muted>
+            {false && <source src = {test}></source>}
         </video>
     </div>
     )
