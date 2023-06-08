@@ -46,9 +46,7 @@ const STD_popuptext = (props) => {
         zIndex: '1',
     }
 
-    useEffect(() => {
-        window.matchMedia("(min-width:30em)").addEventListener('change', e => setWidth(e.matches), [])
-    })
+
     const text_content = {
         overflow: 'hidden',
         height: '300px'
@@ -60,16 +58,30 @@ const STD_popuptext = (props) => {
             (width === false ? s1wide_enlarged : s1tall_enlarged) 
     }
     var [width, setWidth] = useState(
-        window.matchMedia("(min-width:30em)").matches
+        window.matchMedia("(min-width:60em)").matches
     );
+    var [sizestate,setSize] = useState(false)
     var [mode, setMode] = useState(calc(false));
     var [text, setText] = useState("")
+
+    useEffect(() => {
+        const handler = () => {
+            console.log(window.matchMedia("(min-width:60em)").matches)
+            setWidth(window.matchMedia("(min-width:60em)").matches)
+            setMode(calc(false))
+        }
+        window.addEventListener('resize', handler);
+        return () => window.removeEventListener("resize", handler);
+    })
+
     return (
-        <div style={Object.assign({},s1anim,mode)} className="helvetica" onMouseEnter={() => {setMode(calc(true)); setText(props.content); console.log(width)}} onMouseLeave={() => {setMode(calc(false)); setText("")}}>
+        <div style={Object.assign({},s1anim,mode)} className="helvetica" onMouseEnter={() => {setSize(true); setMode(calc(true)); setText(props.content); console.log(width)}} onMouseLeave={() => {setSize(false); setMode(calc(false)); setText("")}}>
             <div>
                 <div style={internal} className="pa2">
-                    <h2 className="">{props.title}</h2>
-                    <div style={text_content} className="">{text}</div>
+                    <div className = "flex flex-column ">
+                        <h2 className="">{props.title}</h2>
+                        <div style={text_content} className="">{text}</div>
+                    </div>
                 </div>
                 <img style={img} src={props.img}></img>
             </div>

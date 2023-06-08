@@ -38,7 +38,7 @@ const Top_bar = () => {
     <div style={outside}>
         <div>
             <div className="flex justify-between w-100 pa3 fl">
-                <div style ={fontcolor} className="helvetica fw6 pa2 w-40">CALL: 1-647-865-0858</div>
+                <div style ={fontcolor} className="helvetica fw6 pa2 w-40 flex flex-wrap">CALL: 1-647-865-0858</div>
                     <div className="helvetica fw6 pa2 fr">
                         <Top_bar_submenu font = 'helvetica' color = ''></Top_bar_submenu>
                     </div>
