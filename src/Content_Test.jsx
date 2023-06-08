@@ -29,15 +29,15 @@ const Content_Test = () => {
             img: LC
         },
         {
-            title: "Fire alarm",
+            title: "Fire Alarm & Security",
             img: FA
         },
         {
-            title: "Power Distribution",
+            title: "Power Distribution & Panel Upgrades",
             img: PD
         },
         {
-            title: "New Construction",
+            title: "Construction & Renovation",
             img: NC
         }
     ]

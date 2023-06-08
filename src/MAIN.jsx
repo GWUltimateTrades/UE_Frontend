@@ -7,6 +7,7 @@ const MAIN = () => {
         color: "#FFFFFF"
     }
 
+
     return (
     <div>
         <Top_bar></Top_bar>
@@ -16,8 +17,7 @@ const MAIN = () => {
         </div>
         <div className = "flex flex-column pa3 pb5 items-center justify-center helvetica">
             <h2>Contact Us</h2>
-            <div>Phone: 1-647-865-0858</div>
-            <div>Email: GWUltimateTrades@hotmail.com</div>
+            <a className = "helvetica link pa3 ba f2 dib mb2"  style={BKG} href="mailto:service@gwult.ca" >Email: service@gwult.ca</a>
         </div>
     </div>
     )
