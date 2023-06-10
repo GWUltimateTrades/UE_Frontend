@@ -38,19 +38,19 @@ const Top_bar = () => {
     <div style={outside}>
         <div>
             <div className="flex justify-between w-100 pa3 fl">
-                <div style ={fontcolor} className="helvetica fw6 pa2 w-40 flex flex-wrap">CALL: 1-647-865-0858</div>
+                <div style ={fontcolor} className="helvetica fw6 pa2 w-30 flex flex-wrap">CALL: 1-647-865-0858</div>
                     <div className="helvetica fw6 pa2 fr">
                         <Top_bar_submenu font = 'helvetica' color = ''></Top_bar_submenu>
                     </div>
                 </div>
-            <div className="flex w-100">
-                <div className="flex flex-column w-90-m  w-40-l w-100 pv3 pl4-l">
-                    <div style={full} className = "pl7-l pv2">
+            <div className="flex flex-wrap w-100">
+                <div className="flex flex-wrap w-40-l w-100 pa6 pv3">
+                    <div style={full} className = "pv2">
                         <Logo_title font = 'helvetica' color = ''></Logo_title>
                     </div>
                 </div>
-                <div style={fontcolor} className="flex w-100 f1 helvetica justify-center items-center">
-                    <div>Quality. Safety. Reliability. Every time.</div>
+                <div style={fontcolor} className="flex w-50-l w-100  helvetica justify-center pa2 items-center">
+                    <div className="ph4 f1-l f2-m f2 tc">Quality. Safety. Reliability. Every time.</div>
                 </div>
             </div>
         </div>

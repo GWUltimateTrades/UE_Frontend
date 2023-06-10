@@ -8,29 +8,29 @@ const STD_popuptext = (props) => {
     }
 
     var s1wide_shrunk = {
-        width: "60%",
-        height: "200px"
+        width: "70%",
+        height: "7em"
     }
 
     var s1wide_enlarged = {
-        width: "60%",
-        height: "400px"
+        width: "70%",
+        height: "30em"
     }
 
     var s1tall_shrunk = {
-        width: "300px",
-        height: "400px"
+        width: "12%",
+        height: "30em"
     }
 
     var s1tall_enlarged = {
-        width: "700px",
-        height: "400px"
+        width: "20%",
+        height: "30em"
     }
 
     const img = {
         position: 'absolute',
+        height: "100%",
         width: '100%',
-        height: '100%',
         top: '0',
         left: '0',
         objectFit: 'cover',
@@ -49,16 +49,15 @@ const STD_popuptext = (props) => {
 
     const text_content = {
         overflow: 'hidden',
-        height: '300px'
     }
 
     const calc = (expanded) => {
         return expanded === false ? 
-            (width === false ? s1wide_shrunk : s1tall_shrunk) : 
-            (width === false ? s1wide_enlarged : s1tall_enlarged) 
+            (width === true ? s1wide_shrunk : s1tall_shrunk) : 
+            (width === true ? s1wide_enlarged : s1tall_enlarged) 
     }
     var [width, setWidth] = useState(
-        window.matchMedia("(min-width:60em)").matches
+        window.matchMedia("(max-width:70em)").matches
     );
     var [sizestate,setSize] = useState(false)
     var [mode, setMode] = useState(calc(false));
@@ -66,8 +65,8 @@ const STD_popuptext = (props) => {
 
     useEffect(() => {
         const handler = () => {
-            console.log(window.matchMedia("(min-width:60em)").matches)
-            setWidth(window.matchMedia("(min-width:60em)").matches)
+            console.log(window.matchMedia("(max-width:70em)").matches)
+            setWidth(window.matchMedia("(max-width:70em)").matches)
             setMode(calc(false))
         }
         window.addEventListener('resize', handler);
@@ -75,12 +74,12 @@ const STD_popuptext = (props) => {
     })
 
     return (
-        <div style={Object.assign({},s1anim,mode)} className="helvetica" onMouseEnter={() => {setSize(true); setMode(calc(true)); setText(props.content); console.log(width)}} onMouseLeave={() => {setSize(false); setMode(calc(false)); setText("")}}>
+        <div style={Object.assign({},s1anim,mode,)} className="helvetica" onMouseEnter={() => {setSize(true); setMode(calc(true)); setText(props.content); console.log(width)}} onMouseLeave={() => {setSize(false); setMode(calc(false)); setText("")}}>
             <div>
                 <div style={internal} className="pa2">
-                    <div className = "flex flex-column ">
+                    <div style = {text_content} className = "flex flex-column">
                         <h2 className="">{props.title}</h2>
-                        <div style={text_content} className="">{text}</div>
+                        <div className="">{text}</div>
                     </div>
                 </div>
                 <img style={img} src={props.img}></img>
