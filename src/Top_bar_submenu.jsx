@@ -28,11 +28,6 @@ const Top_bar_submenu = (props) => {
             <div className = {`pa2 ${props.font} fw6 ph4`}>JOIN US</div>
             <div className = {`pa2 ${props.font} fw6 ph4`}>CONTACT US</div>
         </div>)}</div>
-        <div>{width && (
-            <select>
-
-            </select>
-        )}</div>
     </div>)
 }
 
