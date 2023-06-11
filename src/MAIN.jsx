@@ -3,7 +3,7 @@ import About_us from "./About_us";
 import Content_Test from "./Content_Test";
 const MAIN = () => {
     const BKG = {
-        background: "#18692f",
+        background: "#3B6D47",
         color: "#FFFFFF"
     }
 

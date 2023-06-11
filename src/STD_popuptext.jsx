@@ -65,7 +65,6 @@ const STD_popuptext = (props) => {
 
     useEffect(() => {
         const handler = () => {
-            console.log(window.matchMedia("(max-width:70em)").matches)
             setWidth(window.matchMedia("(max-width:70em)").matches)
             setMode(calc(false))
         }
@@ -74,7 +73,7 @@ const STD_popuptext = (props) => {
     })
 
     return (
-        <div style={Object.assign({},s1anim,mode,)} className="helvetica" onMouseEnter={() => {setSize(true); setMode(calc(true)); setText(props.content); console.log(width)}} onMouseLeave={() => {setSize(false); setMode(calc(false)); setText("")}}>
+        <div style={Object.assign({},s1anim,mode,)} className="helvetica" onMouseEnter={() => {setSize(true); setMode(calc(true)); setText(props.content); }} onMouseLeave={() => {setSize(false); setMode(calc(false)); setText("")}}>
             <div>
                 <div style={internal} className="pa2">
                     <div style = {text_content} className = "flex flex-column">
