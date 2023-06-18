@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import STD_imagetransisionset from "./STD_imagetransisionset";
 
 const STD_popuptext = (props) => {
 
@@ -81,7 +82,7 @@ const STD_popuptext = (props) => {
                         <div className="">{text}</div>
                     </div>
                 </div>
-                <img style={img} src={props.img}></img>
+                <STD_imagetransisionset content={props.img}></STD_imagetransisionset>
             </div>
         </div>
     );
