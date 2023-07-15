@@ -6,7 +6,7 @@ const MAIN = () => {
         background: "#3B6D47",
         color: "#FFFFFF"
     }
-
+ 
 
     return (
     <div>
