@@ -57,7 +57,7 @@ const STD_imagetransisionset = (props) => {
         if (Bstate >= (props.content.length)*150-50) setdir(-1)
         if (Bstate <= 0) setdir(1)
         setBastate(Bstate + direction*2)
-        console.log([Bstate, direction])
+       // console.log([Bstate, direction])
     }
 
     return (

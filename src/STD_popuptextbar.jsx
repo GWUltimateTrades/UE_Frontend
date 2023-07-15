@@ -1,5 +1,5 @@
 import STD_popuptext from "./STD_popuptext";
-import LOGO2 from "./assets/LOGO3.png"
+import LOGO2 from "./assets/LOGO3.webp"
 
 
 import "./BKGVideo.css"

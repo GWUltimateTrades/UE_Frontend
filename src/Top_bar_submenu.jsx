@@ -11,7 +11,7 @@ const Top_bar_submenu = (props) => {
 
     useEffect(() => {
         const handler = () => {
-            console.log(window.matchMedia("(max-width:70em)").matches)
+           // console.log(window.matchMedia("(max-width:70em)").matches)
             setWidth(window.matchMedia("(max-width:70em)").matches)
         }
         window.addEventListener('resize', handler);

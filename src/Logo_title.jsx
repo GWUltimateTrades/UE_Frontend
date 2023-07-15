@@ -1,4 +1,4 @@
-import logo from './assets/LOGO2.png'
+import logo from './assets/LOGO2.webp'
 
 var Logo_title = (props) => {
     const fontcolor = {
